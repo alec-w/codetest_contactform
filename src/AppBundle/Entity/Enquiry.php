@@ -8,9 +8,9 @@ namespace AppBundle\Entity;
 class Enquiry
 {
     private $id;
-    private $name;
-    private $email;
-    private $content;
+    private $name = '';
+    private $email = '';
+    private $content = '';
 
     public function getId(): int
     {
