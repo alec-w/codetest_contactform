@@ -12,6 +12,9 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 use AppBundle\Entity\Enquiry;
 
+use EWZ\Bundle\RecaptchaBundle\Form\Type\EWZRecaptchaType;
+use EWZ\Bundle\RecaptchaBundle\Validator\Constraints\IsTrue as RecaptchaTrue;
+
 /**
  * Contact page form - submits enquiries.
  */
@@ -49,6 +52,7 @@ class ContactForm extends AbstractType
             ->add('name', TextType::class, array('required' => true, 'label' => 'Your name', 'attr' => array('placeholder' => 'Enter your name')))
             ->add('email', EmailType::class, array('required' => true, 'label' => 'Your email address', 'attr' => array('placeholder' => 'Enter your email address')))
             ->add('content', TextareaType::class, array('required' => true, 'attr' => array('rows' => '10'), 'label' => 'Your enquiry', 'attr' => array('placeholder' => 'Enter your enquiry...')))
+            ->add('recaptcha', EWZRecaptchaType::class, array('constraints' => array(new RecaptchaTrue()), 'mapped' => false))
             ->add('save', SubmitType::class, array(
                 'label' => $options['submit_message'],
                 'attr' => array('class' => 'btn-success')
