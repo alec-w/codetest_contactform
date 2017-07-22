@@ -1,7 +1,5 @@
-home:
-    path: /
-    defaults: { _controller: AppBundle:Default:index }
-
 contact:
-    path: /contact
+    path:     /{token}
     defaults: { _controller: AppBundle:Contact:index }
+    requirements:
+        token: .*
