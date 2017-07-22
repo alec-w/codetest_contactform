@@ -74,5 +74,3 @@ swiftmailer:
 ewz_recaptcha:
     public_key:  6Lco-ikUAAAAAObbrVxmIxzYfvbDNz5XrdCq4rcT
     private_key: 6Lco-ikUAAAAAHfVxKN1dHKUQKuViZHbl94jjWSn
-    # Not needed as "%kernel.default_locale%" is the default value for the locale key
-    locale_key:  %kernel.default_locale%
