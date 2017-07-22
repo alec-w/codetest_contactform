@@ -6,7 +6,7 @@ This is a code test to demonstrate a contact page.
 Frameworks
 ----------
 
-  * Backend - Symfony framework. Whilst this might be
+  * Backend - [**Symfony**][3] framework. Whilst this might be
     considered overkill for simply a contact page, a contact page would usually
     be part of a larger site where it would then be only practical to use some
     sort of MVC framework. By using Symfony things like routing, request
@@ -17,7 +17,7 @@ Frameworks
     properly escaping sql query parameters and escaping html characters is
     already handled correctly (provided the frameworks are used correctly).
 
-  * Frontend - Bootstrap framework. This made creating a
+  * Frontend - [**Bootstrap**][4] framework. This made creating a
     user-friendly interface much simpler and it also makes it easy to
     adjust the web page to work on a a variety of device sizes if that was
     later needed.
@@ -101,3 +101,5 @@ into the application as appropriate for your production environment.
 
 [1]:  https://github.com/excelwebzone/EWZRecaptchaBundle
 [2]:  https://www.google.com/recaptcha/admin
+[3]:  http://symfony.com/
+[4]:  http://getbootstrap.com/
