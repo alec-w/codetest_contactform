@@ -72,5 +72,5 @@ swiftmailer:
     spool: { type: memory }
 
 ewz_recaptcha:
-    public_key:  6Lco-ikUAAAAAObbrVxmIxzYfvbDNz5XrdCq4rcT
-    private_key: 6Lco-ikUAAAAAHfVxKN1dHKUQKuViZHbl94jjWSn
+    public_key: '%recaptcha_public_key%'
+    private_key: '%recaptcha_private_key%'
