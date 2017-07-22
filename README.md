@@ -99,7 +99,5 @@ php bin/console cache:warmup --env=prod
 You will need to use .htaccess or other redirect methods to redirect users
 into the application as appropriate for your production environment.
 
-Now point your browser at your production domain to see the site.
-
 [1]:  https://github.com/excelwebzone/EWZRecaptchaBundle
 [2]:  https://www.google.com/recaptcha/admin
