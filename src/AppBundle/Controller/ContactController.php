@@ -43,8 +43,31 @@ class ContactController extends Controller
             }
 
             // Send a confirmation email to the user.
+            $message = (new \Swift_Message('Enquiry Confirmation'))
+                ->setFrom($this->getParameter('mailer_user'))
+                ->setTo($enquiry->getEmail())
+                ->setBody(
+                    $this->renderView(
+                        'Emails/enquiry_confirmation.html.twig',
+                        array('enquiry' => $enquiry)
+                    ),
+                    'text/html'
+                );
+            $this->get('mailer')->send($message);
+
 
             // Send a notification email to enquiries@example.com
+            $message = (new \Swift_Message('New Enquiry Received'))
+                ->setFrom($this->getParameter('mailer_user'))
+                ->setTo('enquiries@example.com')
+                ->setBody(
+                    $this->renderView(
+                        'Emails/enquiry_notification.html.twig',
+                        array('enquiry' => $enquiry)
+                    ),
+                    'text/html'
+                );
+            $this->get('mailer')->send($message);
 
             // Display the submitted enquiry and a message informing it was submitted successfully.
             return $this->render('contact/submitted.html.twig', array(

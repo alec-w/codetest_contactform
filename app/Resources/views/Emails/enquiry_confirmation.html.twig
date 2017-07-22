@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Enquiry Confirmation</title>
+  </head>
+  <body>
+    <!-- Main page content -->
+    <h3>Your enquiry has been received.</h3>
+    <p>Dear {{ enquiry.name }},</p>
+    <p>Thank you for your enquiry. The details of your submitted enquiry are below.</p>
+    <p>{{ enquiry.content }}</p>
+</body>
+</html>
